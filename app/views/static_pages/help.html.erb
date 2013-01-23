@@ -1,2 +1,12 @@
-<h1>StaticPages#help</h1>
-<p>Find me in app/views/static_pages/help.html.erb</p>
+<%-# Embedded Ruby to associate string 'Help' with label :title -%>
+<% provide(:title, 'Help') %>
+
+<h1>Help</h1>
+<p>
+	Get help on the Ruby on Rails Tutorial at the
+	<a href="http://www.youtube.com/watch?v=L1BDM1oBRJ8">
+		Rails Tutorial help page</a>.
+	To get help on this sample app, see the
+	<a href="http://ruby.railstutorial.org/">
+		Rails Tutorial book</a>.
+</p>

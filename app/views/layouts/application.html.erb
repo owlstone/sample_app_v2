@@ -1,14 +1,17 @@
+<%-# Rails 3 uses HTML5 by default -%>
 <!DOCTYPE html>
+
 <html>
-<head>
-  <title>SampleAppV2</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+	<head>
+		<title>RoR Sample App | <%= yield(:title) %></title>
+		<%-# Includes application stylesheet & JavaScript %>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%-# Prevents 'cross site request forgery', a malicious web attack %>
+		<%= csrf_meta_tag %>
+	</head>
+	<body>
+		<%-# Responsible for inserting content of each page into layout %>
+		<%= yield %>
+	</body>
 </html>
