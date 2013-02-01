@@ -3,8 +3,11 @@
 
 <html>
 	<head>
-		<title>RoR Sample App | <%= yield(:title) %></title>
+		<title><%= full_title(yield(:title)) %></title>
 		<%-# Includes application stylesheet & JavaScript %>
+		<%-# Parantheses on function calls are optional %>
+		<%-# stylesheet_link_tag("application", :media => "all") is equivalent to line below... parantheses are optional %>
+		<%-# stylesheet_link_tag "application", { :media => "all" } is also equivalent to line below... curly braces are optional when a hash is the last argument in the function call %>
 		<%= stylesheet_link_tag    "application", :media => "all" %>
 		<%= javascript_include_tag "application" %>
 		<%-# Prevents 'cross site request forgery', a malicious web attack %>
